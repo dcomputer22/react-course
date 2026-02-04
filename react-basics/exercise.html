@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      function Counter({ count, setCount }) {
+        function handleClick() {
+          setCount((prev) => prev + 1);
+        }
+
+        return (
+          <div>
+            <button onClick={handleClick}>
+              Clicked {count} {count > 1 ? 'times' : 'time'}
+            </button>
+          </div>
+        );
+      }
+
+      function App() {
+        // const [count, setCount] = React.useState(0);
+        const [inputText, setInputText] = React.useState('');
+
+        function inputHandler(event) {
+          setInputText(event.target.value);
+        }
+        return (
+          <>
+            <input
+              type="text"
+              placeholder={'Type a name here'}
+              onChange={inputHandler}
+              value={inputText}
+            />
+            <button onClick={() => setInputText('')}>Reset</button>
+            <button onClick={() => setInputText('Hello Oyiza')}>Example</button>
+            <p>{inputText}</p>
+          </>
+        );
+      }
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>
