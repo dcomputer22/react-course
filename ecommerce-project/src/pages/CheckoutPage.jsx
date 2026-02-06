@@ -5,12 +5,17 @@ import './checkout-header.css';
 const CheckoutPage = () => {
   return (
     <>
+      <link
+        rel="icon"
+        type="image/svg+xml"
+        href="/images/favicons/cart-favicon.png"
+      />
       <title>Checkout</title>
 
       <div className="checkout-header">
         <div className="header-content">
           <div className="checkout-header-left-section">
-            <Link to="index.html">
+            <Link to="/">
               <img className="logo" src="images/logo.png" />
               <img className="mobile-logo" src="images/mobile-logo.png" />
             </Link>
@@ -18,7 +23,7 @@ const CheckoutPage = () => {
 
           <div className="checkout-header-middle-section">
             Checkout (
-            <Link className="return-to-home-link" to="index.html">
+            <Link className="return-to-home-link" to="/">
               3 items
             </Link>
             )

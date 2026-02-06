@@ -1,0 +1,20 @@
+.error-page-w {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.error-page-w h2 {
+  margin: 0;
+  font-size: 120px;
+  color: rgb(8, 79, 45);
+}
+.error-page-w h3 {
+  font-size: 30px;
+  border: 3px solid rgb(8, 79, 45);
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 2px 2px rgb(8, 79, 45);
+}
