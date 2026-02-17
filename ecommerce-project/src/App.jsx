@@ -4,7 +4,7 @@ import HomePage from './pages/home/HomePage';
 import CheckoutPage from './pages/checkout/CheckoutPage';
 import OrdersPage from './pages/orders/OrdersPage';
 import './App.css';
-import TrackingPage from './pages/TrackingPage';
+import TrackingPage from './pages/tracking/TrackingPage';
 import NotFoundPage from './pages/NotFoundPage';
 import axios from 'axios';
 
