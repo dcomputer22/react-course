@@ -4,7 +4,7 @@ import './HomePage.css';
 import { useState, useEffect } from 'react';
 import ProductsGrid from './ProductsGrid';
 
-const HomePage = ({ cart }) => {
+const HomePage = ({ cart, getCartItems }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const HomePage = ({ cart }) => {
 
       <Header cart={cart} />
       <div className="home-page">
-        <ProductsGrid products={products} />
+        <ProductsGrid products={products} getCartItems={getCartItems} />
       </div>
     </>
   );
