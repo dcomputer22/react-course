@@ -35,7 +35,6 @@ export const OrdersGrid = ({ orders, getCartItems }) => {
                     productId: orderProduct.product.id,
                     quantity: 1,
                   });
-                  // console.log({ res });
                   getCartItems();
                 };
                 return (
