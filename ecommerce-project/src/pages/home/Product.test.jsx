@@ -1,4 +1,4 @@
-import { it, expect, describe, vi } from 'vitest';
+import { it, expect, describe, vi, beforeEach } from 'vitest';
 // import { formatMoney } from './money';s
 import { render, screen } from '@testing-library/react';
 import { Product } from './Product';
@@ -8,8 +8,12 @@ import axios from 'axios';
 vi.mock('axios');
 
 describe('Product component', () => {
-  it('displays product details correctly', () => {
-    const product = {
+  let product;
+
+  let getCartItems;
+
+  beforeEach(() => {
+    product = {
       id: '15b6fc6f-327a-4ec4-896f-486349e85a3d',
       image: 'images/products/intermediate-composite-basketball.jpg',
       name: 'Intermediate Size Basketball',
@@ -21,8 +25,10 @@ describe('Product component', () => {
       keywords: ['sports', 'basketballs'],
     };
 
-    const getCartItems = vi.fn();
+    getCartItems = vi.fn();
+  });
 
+  it('displays product details correctly', () => {
     render(<Product product={product} getCartItems={getCartItems} />);
 
     expect(
@@ -44,21 +50,8 @@ describe('Product component', () => {
   });
 
   it('Adds a product to the cart', async () => {
-    const product = {
-      id: '15b6fc6f-327a-4ec4-896f-486349e85a3d',
-      image: 'images/products/intermediate-composite-basketball.jpg',
-      name: 'Intermediate Size Basketball',
-      rating: {
-        stars: 4,
-        count: 127,
-      },
-      priceCents: 2095,
-      keywords: ['sports', 'basketballs'],
-    };
-
-    const getCartItems = vi.fn();
-
     render(<Product product={product} getCartItems={getCartItems} />);
+
     const user = userEvent.setup();
     const addToCartButton = screen.getByTestId('add-to-cart-button');
     await user.click(addToCartButton);
