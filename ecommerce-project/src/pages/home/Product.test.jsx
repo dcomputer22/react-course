@@ -48,7 +48,7 @@ describe('Product component', () => {
     expect(screen.getByText('127')).toBeInTheDocument();
   });
 
-  it('Adds a product to the cart', async () => {
+  it('adds a product to the cart', async () => {
     render(<Product product={product} getCartItems={getCartItems} />);
 
     const user = userEvent.setup();
@@ -58,6 +58,26 @@ describe('Product component', () => {
     expect(axios.post).toHaveBeenCalledWith('/api/cart-items', {
       productId: product.id,
       quantity: 1,
+    });
+    expect(getCartItems).toHaveBeenCalled();
+  });
+
+  it('selects quantity of product', async () => {
+    render(<Product product={product} getCartItems={getCartItems} />);
+
+    const quantitySelector = screen.getByTestId('select-quantity');
+    expect(quantitySelector).toHaveValue('1');
+
+    const user = userEvent.setup();
+    await user.selectOptions(quantitySelector, '3');
+    expect(quantitySelector).toHaveValue('3');
+
+    const addToCartButton = screen.getByTestId('add-to-cart-button');
+    await user.click(addToCartButton);
+
+    expect(axios.post).toHaveBeenCalledWith('/api/cart-items', {
+      productId: '15b6fc6f-327a-4ec4-896f-486349e85a3d',
+      quantity: 3,
     });
     expect(getCartItems).toHaveBeenCalled();
   });
