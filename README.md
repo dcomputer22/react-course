@@ -10,9 +10,9 @@ This project focuses on strengthening my frontend foundation while gradually exp
 
 This repository contains:
 
-* 🔹 Core React concepts and practice exercises
-* 🔹 A chatbot application with predefined responses
-* 🔹 A full-stack ecommerce application (frontend + backend)
+- 🔹 Core React concepts and practice exercises
+- 🔹 A chatbot application with predefined responses
+- 🔹 A full-stack ecommerce application (frontend + backend)
 
 The goal is to **learn by building**, not just theory.
 
@@ -20,38 +20,38 @@ The goal is to **learn by building**, not just theory.
 
 ## React Basics Covered
 
-* Functional Components
-* Props & State Management
-* Event Handling
-* Conditional Rendering
-* Lists & Keys
-* React Hooks:
+- Functional Components
+- Props & State Management
+- Event Handling
+- Conditional Rendering
+- Lists & Keys
+- React Hooks:
+  - `useState`
+  - `useEffect`
 
-  * `useState`
-  * `useEffect`
-* Forms & Controlled Inputs
-* Component Reusability
-* Basic Project Structuring
+- Forms & Controlled Inputs
+- Component Reusability
+- Basic Project Structuring
 
 ---
 
-## 🤖 Chatbot Project
+## Chatbot Project
 
-### 📖 Description
+### Description
 
 A simple chatbot application built with React that responds to user inputs using **predefined prompt-response logic**.
 
-### ⚙️ How It Works
+### How It Works
 
-* Uses a script containing mapped questions and responses
-* Matches user input to predefined responses
-* Displays responses dynamically in the UI
+- Uses a script containing mapped questions and responses
+- Matches user input to predefined responses
+- Displays responses dynamically in the UI
 
 ### What I Learned
 
-* Managing UI state effectively
-* Handling dynamic user input
-* Structuring interactive components
+- Managing UI state effectively
+- Handling dynamic user input
+- Structuring interactive components
 
 > Note: This is a **rule-based chatbot**, not AI-powered.
 
@@ -67,66 +67,66 @@ A full-stack ecommerce application simulating a real-world shopping experience.
 
 ### Frontend (React + Vite)
 
-* Built with React (Vite setup)
-* Responsive UI
-* Product listing page
-* Product detail view
-* Shopping cart functionality
+- Built with React (Vite setup)
+- Responsive UI
+- Product listing page
+- Product detail view
+- Shopping cart functionality
 
 ---
 
 ### Backend (Node.js)
 
-* Lightweight backend built with Node.js
-* Uses **mocked JSON data** (no database yet)
-* REST-style endpoints for:
-
-  * Products
-  * Cart interactions
+- Lightweight backend built with Node.js
+- Uses **mocked JSON data** (no database yet)
+- REST-style endpoints for:
+  - Products
+  - Cart interactions
 
 ---
 
 ### Key Features
 
-* Add/remove items from cart
-* Dynamic UI updates
-* API communication between frontend & backend
-* Modular project structure
+- Add/remove items from cart
+- Dynamic UI updates
+- API communication between frontend & backend
+- Modular project structure
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
-* React
-* Vite
-* JavaScript (ES6+)
-* CSS
+- React
+- Vite
+- JavaScript (ES6+)
+- CSS
 
 ### Backend
 
-* Node.js
+- Node.js
 
 ### Data Handling
 
-* JSON (mock data)
+- JSON (mock data)
 
 ### Deployment
 
-* AWS
+- AWS
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```bash
 react-course/
 │
 ├── basics/               # React fundamentals & practice
-├── chatbot/              # Rule-based chatbot project
-│── frontend/         # React (Vite)
-│── backend/          # Node.js + JSON data
+├── chatbot/
+├── ecommerce-app/      # Rule-based chatbot project
+   ├──ecommerce-project/
+   ├── ecommerce-backend/         # Node.js + JSON data
 │
 └── README.md
 ```
@@ -164,33 +164,33 @@ node server.js
 
 ---
 
-## 📈 Learning Goals
+## Learning Goals
 
-* Build a strong foundation in React
-* Understand how frontend and backend communicate
-* Transition into full-stack development
-* Gain hands-on experience through real projects
-
----
-
-## 🔮 Future Improvements
-
-* Integrate a real database (PostgreSQL or MongoDB)
-* Add authentication system
-* Improve chatbot with AI integration
-* Implement testing (Vitest / Cypress)
-* Enhance UI/UX
+- Build a strong foundation in React
+- Understand how frontend and backend communicate
+- Transition into full-stack development
+- Gain hands-on experience through real projects
 
 ---
 
-## 👩‍💻 Author
+## Future Improvements
+
+- Integrate a real database (PostgreSQL or MongoDB)
+- Add authentication system
+- Improve chatbot with AI integration
+- Implement testing (Vitest / Cypress)
+- Enhance UI/UX
+
+---
+
+## Author
 
 **Fatima Oyiza Jimoh**
 Frontend Developer → Aspiring Full-Stack Engineer
 
 ---
 
-## 📄 License
+## License
 
 This project is open-source and available under the MIT License.
 
